@@ -72,5 +72,25 @@ Based on the results of our summary, we have an R-squared value of *0.7149* whic
 that, in fact, this model should predict *mpg* effectively
 
 
+## Summary Statistics on Suspension Coils
+
+Our total summary of the suspension coils will be calculated with 
+`total_summary <- suspension_coil_df %>% summarize(Mean=mean(PSI),Median=median(PSI),Variance=var(PSI),SD=sd(PSI), .groups = 'keep')`
+and produces this dataframe:
+
+![Total Summary dataframe](total_summary.png)
+
+Our individual lot summary will be calculated with:
+`lot_summary <- suspension_coil_df %>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI),Median=median(PSI),Variance=var(PSI),SD=sd(PSI), .groups = 'keep')`
+and produces this dataframe:
+
+![Lot Summary dataframe](lot_summary.png)
+
+In summary, based on our Lot summary dataframe, all but one manufacturing lot meets the
+design specifications for the Mechacar suspension coils. The Lot Summary shows that
+manufacturing lot 3 does not fall within the 100 PSI variance. Lots 1 and 2 fall within the
+100 PSI variance with 0.98 and 7.5 PSI respectively. But Lot 3's variance is at 170.3 PSI
+
+
 
 
