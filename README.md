@@ -91,6 +91,34 @@ design specifications for the Mechacar suspension coils. The Lot Summary shows t
 manufacturing lot 3 does not fall within the 100 PSI variance. Lots 1 and 2 fall within the
 100 PSI variance with 0.98 and 7.5 PSI respectively. But Lot 3's variance is at 170.3 PSI
 
+## T-Tests on Suspension Coils
+We performed T-Tests on our Sample data to determine if all manufacturing lots and 
+each lot individually are statistically different from the population mean of 1,500 pounds per square inch
+
+Our overall T-Test of all manufacturing lots yeilds these results:
+
+![All manufacturing lot sample Test](PSI_all.png)
+
+with a p-value of *0.4478* we can not reject the null hypothesis and should consider that
+there is no significant difference between our all manufacturing lot Sample PSI means and the population
+PSI mean. 
+
+Testing the manufacturing lots individually we get:
+
+![Lot 1 Samples](Lot1.png)
+
+![Lot 2 Samples](Lot2.png)
+
+![Lot 3 Samples](Lot3.png)
+
+with all three p-values above *0.05* we still can not reject the null hypothesis and should consider
+that there is no significant difference between our individual manufacturing lot samples and the 
+population.
+
+In Summary, we can consider our sample set to be an accurate representation of our population with
+regard to PSI.
+
+
 
 
 
