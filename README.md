@@ -1,7 +1,7 @@
-# MechaCar_Statistical_Analysis
+# MechaCar Statistical Analysis
 
-The purpose of this project is to analysis to identify which variables in our *MechaCar_mpg*
-dataset predict the *mpg* of MechaCar prototypes.
+The purpose of this project is to analysis to identify which variables in our ***MechaCar_mpg***
+dataset predict the **mpg** of MechaCar prototypes.
 
 ## Linear Regression to Predict MPG
 We want to generate a multiple linear regression model using the lm() function with these
@@ -9,7 +9,7 @@ variables
 
 ```lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD,data=mechacar_df)```
 
-where *mechacar_df* is our dataframe that is generated from our *MechaCar_mpg* dataset.
+where **mechacar_df** is our dataframe that is generated from our **MechaCar_mpg** dataset.
 The linear regression model produced is:
 
 ![Linear Model](screenshot1.png)
@@ -63,8 +63,8 @@ F-statistic: 22.07 on 5 and 44 DF,  p-value: 5.35e-11
 
 ### Is the slope of the linear model considered to be zero? Why or why not?
 Because we vehicle-length and ground-clearance would make up two significant linear relationships, we
-can claim that the slope of our linear model is NOT zero. In addition, we have a *p-value* much
-less than *0.05* with *5.35 x 10^-11* value for p-value. Which means that we can reject our
+can claim that the slope of our linear model is NOT zero. In addition, we have a **p-value** much
+less than **0.05** with **5.35 x 10^-11** value for p-value. Which means that we can reject our
 null hypothesis of: `H0 : The slope of the linear model is zero, or m = 0`
 
 ### Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
@@ -99,7 +99,7 @@ Our overall T-Test of all manufacturing lots yeilds these results:
 
 ![All manufacturing lot sample Test](PSI_all.png)
 
-with a p-value of *0.4478* we can not reject the null hypothesis and should consider that
+with a p-value of **0.4478** we can not reject the null hypothesis and should consider that
 there is no significant difference between our all manufacturing lot Sample PSI means and the population
 PSI mean. 
 
@@ -111,7 +111,7 @@ Testing the manufacturing lots individually we get:
 
 ![Lot 3 Samples](Lot3.png)
 
-with all three p-values above *0.05* we still can not reject the null hypothesis and should consider
+with all three p-values above **0.05** we still can not reject the null hypothesis and should consider
 that there is no significant difference between our individual manufacturing lot samples and the 
 population.
 
@@ -119,6 +119,31 @@ In Summary, we can consider our sample set to be an accurate representation of o
 regard to PSI.
 
 
+## Study Design: MechaCar vs Competition
 
+We want to create a statistical study that would quantify how our Mechacar performs against our 
+competitors. For this study, we are choosing 0-to-60 mph as our measure of performance to compare against competitor cars.
+First, we want to establish the dependent and independant variables that may contribute to the 0-to-60 mph metric.
+These variables will be:
+
+-	engine size
+-	no. of cylinders
+-	fuel efficiency
+-	tire size
+-	curb weight
+
+Next we will establish our **null** and **alternative** hypotheses about these variables.
+
+Our **null** hypothesis is:
+Each individual variable has a correlating effect on a vehicle's 0-to-60 mph metric.
+
+Our **alternative** hypothesis is:
+Each individual variable does not have a correlating effect on a vehicle's 0-to-60 mph metric.
+
+We will then run each of the variables against a **Linear regression** to determine if our
+variable has a significant correlation on our 0-to-60 mph metric.
+The data types we will use are the continuous data gathered from each of our variables.
+
+Lastly, we will run the same study on our competitor's vehicles to draw our performance comparison.
 
 
